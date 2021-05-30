@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "202246161555",
+    "project_id": "bacaplat-980d9",
+    "storage_bucket": "bacaplat-980d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202246161555:android:9819c61deaf1d713563966",
+        "android_client_info": {
+          "package_name": "com.example.bacaplat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202246161555-gfq6lvpir5fmrjanbrqrd98s4e6rgq7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXx0EKYB-S5lrtWLLUjO_ovqy3o0LceTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202246161555-gfq6lvpir5fmrjanbrqrd98s4e6rgq7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
