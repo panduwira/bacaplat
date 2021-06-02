@@ -1,3 +1,5 @@
+import 'package:bacaplat/modelPlat.dart';
+import 'package:bacaplat/plat_services.dart';
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +25,8 @@ class _DetailsState extends State<Details> {
               FlutterClipboard.copy(widget.text).then((value) => _key
                   .currentState
                   .showSnackBar(new SnackBar(content: Text('Copied'))));
+              PlatNomor platNomor = PlatNomor('', widget.text, "");
+              PlatServices.addData(platNomor);
             },
           )
         ],
