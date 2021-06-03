@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 
 class Details extends StatefulWidget {
   final String text;
-  Details(this.text);
+  final String date;
+  Details(this.text, this.date);
   @override
   _DetailsState createState() => _DetailsState();
 }
@@ -25,7 +26,7 @@ class _DetailsState extends State<Details> {
               FlutterClipboard.copy(widget.text).then((value) => _key
                   .currentState
                   .showSnackBar(new SnackBar(content: Text('Copied'))));
-              PlatNomor platNomor = PlatNomor('', widget.text, "");
+              PlatNomor platNomor = PlatNomor('', widget.text, widget.date);
               PlatServices.addData(platNomor);
             },
           )
