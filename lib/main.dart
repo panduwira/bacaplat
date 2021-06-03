@@ -1,13 +1,6 @@
-import 'dart:io';
-
 import 'package:bacaplat/foto.dart';
 import 'package:bacaplat/list.dart';
-import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:intl/intl.dart';
-
-import 'details.dart';
 
 main() async {
   runApp(MaterialApp(home: MyApp()));
