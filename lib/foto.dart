@@ -68,7 +68,6 @@ class _FotoState extends State<Foto> {
           .toString();
     });
 
-    Navigator.of(context).pop();
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => Details(_text, _date)));
   }
