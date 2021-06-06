@@ -9,11 +9,11 @@ class ListPlat extends StatefulWidget {
   _ListPlatState createState() => _ListPlatState();
 }
 
+var i;
+
 class _ListPlatState extends State<ListPlat> {
   Widget build(BuildContext context) {
-    future:
-    Firebase.initializeApp();
-    var i = 0;
+    i = 0;
     return Container(
       margin: EdgeInsets.only(left: 25, right: 25),
       height: double.infinity,
@@ -30,30 +30,26 @@ class _ListPlatState extends State<ListPlat> {
 
             if (snapshot.data == null) return CircularProgressIndicator();
 
-            return ListView(
-              children: snapshot.data.docs.map((DocumentSnapshot doc) {
-                print(snapshot.data.docs.map.toString());
-                i = i + 1;
-
-                return DataTable(
-                  columns: [
-                    DataColumn(label: Text('No')),
-                    DataColumn(label: Text('Plat')),
-                    DataColumn(label: Text('Date')),
-                  ],
-                  rows: [
-                    DataRow(cells: [
-                      DataCell(Text(i.toString())),
-                      DataCell(Text(doc.get('plat'))),
-                      DataCell(Text(doc.get('date'))),
-                    ]),
-                  ],
-                );
-              }).toList(),
-            );
+            return DataTable(columns: [
+              DataColumn(label: Text('No')),
+              DataColumn(label: Text('Plat')),
+              DataColumn(label: Text('Date')),
+            ], rows: _buildList(context, snapshot.data.docs));
           },
         ),
       ),
     );
+  }
+
+  List<DataRow> _buildList(
+      BuildContext context, List<DocumentSnapshot> snapshot) {
+    return snapshot.map((DocumentSnapshot doc) {
+      i = i + 1;
+      return DataRow(cells: [
+        DataCell(Text(i.toString())),
+        DataCell(Text(doc.get('plat'))),
+        DataCell(Text(doc.get('date'))),
+      ]);
+    }).toList();
   }
 }

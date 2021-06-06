@@ -1,5 +1,6 @@
 import 'package:bacaplat/foto.dart';
 import 'package:bacaplat/list.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 main() async {
@@ -26,6 +27,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    Firebase.initializeApp();
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
