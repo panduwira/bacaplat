@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "202246161555",
-    "project_id": "bacaplat-980d9",
-    "storage_bucket": "bacaplat-980d9.appspot.com"
+    "project_number": "691712771894",
+    "project_id": "bacaplat",
+    "storage_bucket": "bacaplat.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:202246161555:android:9819c61deaf1d713563966",
+        "mobilesdk_app_id": "1:691712771894:android:326483d0df51586c701597",
         "android_client_info": {
-          "package_name": "com.example.bacaplat"
+          "package_name": "com.panduwira.bacaplat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "202246161555-gfq6lvpir5fmrjanbrqrd98s4e6rgq7m.apps.googleusercontent.com",
+          "client_id": "691712771894-tepeo1t9tfvdvfstmn8ebh3491mg7e4g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDXx0EKYB-S5lrtWLLUjO_ovqy3o0LceTg"
+          "current_key": "AIzaSyB3CLuNbY2Y2a0LRCFLUb6t7PFnfM44TnI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "202246161555-gfq6lvpir5fmrjanbrqrd98s4e6rgq7m.apps.googleusercontent.com",
+              "client_id": "691712771894-tepeo1t9tfvdvfstmn8ebh3491mg7e4g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -11,6 +11,7 @@ class ListPlat extends StatefulWidget {
 
 class _ListPlatState extends State<ListPlat> {
   Widget build(BuildContext context) {
+    Firebase.initializeApp();
     var i = 0;
     return Container(
       margin: EdgeInsets.only(left: 25, right: 25),
