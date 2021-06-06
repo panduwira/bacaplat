@@ -11,7 +11,7 @@ class ListPlat extends StatefulWidget {
 
 class _ListPlatState extends State<ListPlat> {
   Widget build(BuildContext context) {
-    var i = 1;
+    var i = 0;
     return Container(
       margin: EdgeInsets.only(left: 25, right: 25),
       height: double.infinity,
@@ -26,8 +26,11 @@ class _ListPlatState extends State<ListPlat> {
               return Text("Failed to get products data!");
             }
 
+            if (snapshot.data == null) return CircularProgressIndicator();
+
             return ListView(
               children: snapshot.data.docs.map((DocumentSnapshot doc) {
+                print(snapshot.data.docs.map.toString());
                 i = i + 1;
 
                 return DataTable(

@@ -35,7 +35,6 @@ class PlatServices {
 
   static Future<DocumentSnapshot> getData() async {
     await Firebase.initializeApp();
-    Firebase.initializeApp();
     DocumentSnapshot snapshot;
     snapshot = await PlatServices.platCollection.doc().get();
     return snapshot;
