@@ -1,6 +1,4 @@
-import 'package:bacaplat/plat_services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +10,8 @@ class ListPlat extends StatefulWidget {
 class _ListPlatState extends State<ListPlat> {
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('List Plat')),
+      appBar:
+          AppBar(title: Text('List Plat'), backgroundColor: Colors.orange[400]),
       body: Container(
         width: double.infinity,
         height: double.infinity,

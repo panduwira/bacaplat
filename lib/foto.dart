@@ -23,6 +23,7 @@ class _FotoState extends State<Foto> {
     return Scaffold(
         appBar: AppBar(
           title: Text('BacaPlat'),
+          backgroundColor: Colors.orange[400],
           actions: [
             FlatButton(
               onPressed: scanText,
@@ -36,6 +37,7 @@ class _FotoState extends State<Foto> {
         floatingActionButton: FloatingActionButton(
           onPressed: getImage,
           child: Icon(Icons.add_a_photo),
+          backgroundColor: Colors.orange[400],
         ),
         body: Container(
           height: double.infinity,
@@ -73,7 +75,7 @@ class _FotoState extends State<Foto> {
   }
 
   Future getImage() async {
-    final pickedFile = await picker.getImage(source: ImageSource.camera);
+    final pickedFile = await picker.getImage(source: ImageSource.gallery);
     setState(() {
       if (pickedFile != null) {
         _image = pickedFile;

@@ -1,7 +1,5 @@
-import 'package:bacaplat/main.dart';
 import 'package:bacaplat/modelPlat.dart';
 import 'package:bacaplat/plat_services.dart';
-import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatefulWidget {
@@ -21,15 +19,12 @@ class _DetailsState extends State<Details> {
       appBar: AppBar(
         title: Text('Details'),
         actions: [
-          TextButton(
-            child: Text("Save"),
+          IconButton(
+            icon: Icon(Icons.save_alt),
             onPressed: () {
-              FlutterClipboard.copy(widget.text).then((value) => _key
-                  .currentState
-                  .showSnackBar(new SnackBar(content: Text('Saved'))));
               PlatNomor platNomor = PlatNomor('', widget.text, widget.date);
               PlatServices.addData(platNomor);
-              Navigator.of(context).popUntil((route) => route.isFirst);
+              PlatNomor('', '', '');
             },
           )
         ],
