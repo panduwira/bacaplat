@@ -9,15 +9,11 @@ class ListPlat extends StatefulWidget {
   _ListPlatState createState() => _ListPlatState();
 }
 
-var i;
-
 class _ListPlatState extends State<ListPlat> {
   Widget build(BuildContext context) {
-    i = 0;
-    return Container(
-      margin: EdgeInsets.only(left: 25, right: 25),
-      height: double.infinity,
-      child: Container(
+    return Scaffold(
+      appBar: AppBar(title: Text('List Plat')),
+      body: Container(
         width: double.infinity,
         height: double.infinity,
         child: StreamBuilder<QuerySnapshot>(
@@ -31,7 +27,6 @@ class _ListPlatState extends State<ListPlat> {
             if (snapshot.data == null) return CircularProgressIndicator();
 
             return DataTable(columns: [
-              DataColumn(label: Text('No')),
               DataColumn(label: Text('Plat')),
               DataColumn(label: Text('Date')),
             ], rows: _buildList(context, snapshot.data.docs));
@@ -44,9 +39,7 @@ class _ListPlatState extends State<ListPlat> {
   List<DataRow> _buildList(
       BuildContext context, List<DocumentSnapshot> snapshot) {
     return snapshot.map((DocumentSnapshot doc) {
-      i = i + 1;
       return DataRow(cells: [
-        DataCell(Text(i.toString())),
         DataCell(Text(doc.get('plat'))),
         DataCell(Text(doc.get('date'))),
       ]);

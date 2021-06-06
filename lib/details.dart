@@ -21,8 +21,8 @@ class _DetailsState extends State<Details> {
       appBar: AppBar(
         title: Text('Details'),
         actions: [
-          IconButton(
-            icon: Icon(Icons.save),
+          TextButton(
+            child: Text("Save"),
             onPressed: () {
               FlutterClipboard.copy(widget.text).then((value) => _key
                   .currentState
