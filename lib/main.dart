@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.photo),
+              icon: Icon(Icons.camera_alt),
               label: ("Take Photo"),
               backgroundColor: Colors.orange),
           BottomNavigationBarItem(

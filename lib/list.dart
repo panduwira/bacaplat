@@ -11,6 +11,7 @@ class ListPlat extends StatefulWidget {
 
 class _ListPlatState extends State<ListPlat> {
   Widget build(BuildContext context) {
+    future:
     Firebase.initializeApp();
     var i = 0;
     return Container(
